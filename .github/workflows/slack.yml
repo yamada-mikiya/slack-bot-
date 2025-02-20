@@ -1,0 +1,18 @@
+name: Send Slack Notification
+
+on:
+  push:
+    branches:
+      - main # メインブランチに push されたときに実行
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send message to Slack
+        uses: slackapi/slack-github-action@v1
+        with:
+          channel-id: C08DXAMDT53 # 送信先のSlackチャンネルID
+          slack-message: "GitHub Actions からの通知テスト 🎉"
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
