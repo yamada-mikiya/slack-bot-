@@ -28,6 +28,6 @@ jobs:
         uses: slackapi/slack-github-action@v1
         with:
           channel-id: C08DXAMDT53 # 送信先のSlackチャンネルID
-          slack-message: file://slack_output.txt
+          slack-message: $(cat slack_output.txt)
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
