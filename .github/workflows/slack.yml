@@ -1,9 +1,8 @@
 name: Send Slack Notification
 
 on:
-  push:
-    branches:
-      - main # メインブランチに push されたときに実行
+  schedule:
+    - cron: "*/30 * * * *" # 30分おきに実行（UTC時間）
 
 jobs:
   notify:
@@ -13,6 +12,6 @@ jobs:
         uses: slackapi/slack-github-action@v1
         with:
           channel-id: C08DXAMDT53 # 送信先のSlackチャンネルID
-          slack-message: "GitHub Actions からの通知テスト 🎉"
+          slack-message: "GitHub Actions からの定期通知 🎉"
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
