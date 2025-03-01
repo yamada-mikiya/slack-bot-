@@ -27,6 +27,6 @@ jobs:
       - name: Send message to Slack
         uses: slackapi/slack-github-action@v1
         with:
-          channel-id: C08DXAMDT53 # 送信先のSlackチャンネルID
+          channel-id: C08GB08NU6L # 送信先のSlackチャンネルID
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
