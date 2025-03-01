@@ -11,7 +11,7 @@ SLACK_BOT_TOKEN = os.getenv("SLACK_BOT_TOKEN")
 client = WebClient(token=SLACK_BOT_TOKEN)
 
 # ✅ 送信先チャンネル
-CHANNEL_ID = "C08DXAMDT53"
+CHANNEL_ID = "C08GB08NU6L"
 
 # ✅ 集計対象期間（日本時間）
 START_JST = datetime(2024, 5, 9, 18, 30, 0)
