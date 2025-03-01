@@ -23,7 +23,7 @@ CHANNELS_LIST = client.conversations_list(limit=1000)['channels']
 BOT_USER_ID = client.auth_test()["user_id"]
 
 # ✅ 対象ユーザー
-TARGET_USERS = ["情報知能工学科A4", "ふな", "経済1 A4"]
+TARGET_USERS = ["情知　A4", "ふな", "経済1 A4"]
 TARGET_EMOJI = "回答"
 
 # ✅ ユーザー名 → ユーザーID の変換
