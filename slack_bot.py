@@ -19,7 +19,7 @@ END_JST = datetime(2025, 5, 19, 23, 59, 59)
 
 # ✅ ユーザー情報とチャンネル情報を取得
 USERS_LIST = client.users_list()['members']
-CHANNELS_LIST = client.conversations_list(limit=1000)['channels']
+CHANNELS_LIST = client.conversations_list(limit=1000, types="public_channel,private_channel")['channels']
 BOT_USER_ID = client.auth_test()["user_id"]
 
 # ✅ 対象ユーザー
