@@ -26,7 +26,7 @@ CHANNELS_LIST = client.conversations_list(limit=1000, types="public_channel,priv
 BOT_USER_ID = client.auth_test()["user_id"]  # BotのユーザーIDを取得
 
 # 🔹 対象ユーザー
-TARGET_USERS = ["情知　A4", "運営_A4", "電電　A4", "情知　A4 ふな","海洋　A4","グロ文 2 神戸大学混声合唱団アポロン","経済 A4 まつゆき","文学部　A4"]
+TARGET_USERS = ["情知　A4", "運営_A4", "電電　A4", "情知2 A4 ふな","海洋　A4","グロ文 2 神戸大学混声合唱団アポロン","経済 A4 まつゆき","文学部　A4"]
 TARGET_EMOJI = "回答"
 
 # 🔹 ユーザー名 → ユーザーID の変換
