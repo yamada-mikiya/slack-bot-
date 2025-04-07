@@ -17,16 +17,9 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install slack_sdk pytz
+        run: pip install slack_sdk pytz python-dotenv
 
       - name: Run Slack Bot script
         run: python slack_bot.py | tee slack_output.txt
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-
-      - name: Send message to Slack
-        uses: slackapi/slack-github-action@v1
-        with:
-          channel-id: C08GB08NU6L # 送信先のSlackチャンネルID
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
