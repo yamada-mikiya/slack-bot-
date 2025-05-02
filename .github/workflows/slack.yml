@@ -1,8 +1,8 @@
 name: Send Slack Notification
 
 on:
-  schedule:
-    - cron: "0 8 * * *" # UTC時間で8:00（日本時間の17:00）
+  #schedule:
+  #  - cron: "0 8 * * *" # UTC時間で8:00（日本時間の17:00）
   workflow_dispatch: 
 
 jobs:
